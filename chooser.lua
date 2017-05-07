@@ -50,6 +50,6 @@ chooser.chooser:queryChangedCallback(function(query_string)
     chooser.chooser:choices(choices)
 end)
 
-hs.hotkey.bind({"alt"}, "S", nil, function() chooser:show() end)
+hs.hotkey.bind({"alt"}, "S", nil, function() chooser.chooser:show() end)
 
 print("\n\n*** Chooser loaded ... ***\n\n")

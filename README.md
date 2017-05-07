@@ -1,6 +1,6 @@
 # nzhl-hammerspoon
 
-Hammerspoon is a versatile tool on Mac but unfortunately only little people know it. Here is my hammer config which is inspired by [awesome-hammerspoon](https://github.com/ashfinal/awesome-hammerspoon). His config is much power than me, but i found it's a little too fat for me, so I just write my own. 
+Hammerspoon is a versatile tool on Mac but unfortunately only little people know it. Here is my hammer config which is inspired by [awesome-hammerspoon](https://github.com/ashfinal/awesome-hammerspoon). His config is much powerful than me, but i found it's a little too fat for me, so I just write my own. 
 
 ## Get started
 
