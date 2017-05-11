@@ -9,27 +9,29 @@ print("\n\n*** Chooser init ...  ***\n\n")
 chooser = {}
 
 
-local choices = {
-    -- iTunes Control Part --
-    {
-        text = hs.itunes.isPlaying() and "Pause" or "Play",
-        subText = hs.itunes.getCurrentTrack() and "Current Playing : " .. hs.itunes.getCurrentTrack() or "Start Now",
-        index = 1
-    },
-    {
-        text = "Next",
-        index = 2
-    },
-    {
-        text = "Previous",
-        index = 3
-    },
-    -- Lock Screen Part --
-    {
-        text = "Lock Screen",
-        index = 4
+local function getChoices()
+    return {
+        -- iTunes Control Part --
+        {
+            text = hs.itunes.isPlaying() and "Pause" or "Play",
+            subText = hs.itunes.getCurrentTrack() and "Current Playing : " .. hs.itunes.getCurrentTrack() or "Start Now",
+            index = 1
+        },
+        {
+            text = "Next",
+            index = 2
+        },
+        {
+            text = "Previous",
+            index = 3
+        },
+        -- Lock Screen Part --
+        {
+            text = "Lock Screen",
+            index = 4
+        }
     }
-}
+end
 
 local actions = {
     -- iTunes Control Part --
@@ -47,7 +49,7 @@ end)
 
 chooser.chooser:queryChangedCallback(function(query_string)
     --TODO : filter choices according to the query_string
-    chooser.chooser:choices(choices)
+    chooser.chooser:choices(getChoices())
 end)
 
 hs.hotkey.bind({"alt"}, "S", nil, function() chooser.chooser:show() end)
