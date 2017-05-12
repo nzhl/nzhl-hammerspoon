@@ -18,7 +18,7 @@ todo.title_text = general.CreateBackgroundText(title_frame, "说出你的故事 
 --------------------- content ------------------
 
 local kTodoWidth = 300
-local kTodoHeight = 400
+local kTodoHeight = 200
 
 local kTodoStartX = general.full_frame.w - 300
 local kTodoStartY = 150
@@ -35,4 +35,9 @@ end
 
 todo.path_watcher = hs.pathwatcher.new(general.config_path .. "todo.txt", UpdateTodoList):start()
 
+---  image --
+
+local image_frame = hs.geometry.rect(general.full_frame.w - 500,350, 400, 200);
+todo.image = general.CreateBackgroundImage(image_frame, general.config_path .. "resources/timetable.png")
+todo.image:show();
 print("\n\n*** todo_list loaded ... ***\n\n")
