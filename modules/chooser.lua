@@ -1,13 +1,13 @@
 --
---  This file mainly implement the chooser functionality.
+--  This module mainly implement the chooser functionality.
 --      1. iTunes Control
 --      2. Lock Screen
 --
 
-print("\n\n*** Chooser init ...  ***\n\n")
+local general = require("general");
+general.printM(debug.getinfo(1).source:match(".*/(.*)"), "init")
 
-chooser = {}
-
+local _M = {};
 
 local function getChoices()
     return {
@@ -42,16 +42,18 @@ local actions = {
     hs.caffeinate.systemSleep
 }
 
-chooser.chooser = hs.chooser.new(function(choice)
+local chooser = hs.chooser.new(function(choice)
     if not choice then return end
     actions[choice.index]()
 end)
 
-chooser.chooser:queryChangedCallback(function(query_string)
+chooser:queryChangedCallback(function(query_string)
     --TODO : filter choices according to the query_string
-    chooser.chooser:choices(getChoices())
+    chooser:choices(getChoices())
 end)
 
-hs.hotkey.bind({"alt"}, "S", nil, function() chooser.chooser:show() end)
+hs.hotkey.bind({"alt"}, "S", nil, function() chooser:show() end)
 
-print("\n\n*** Chooser loaded ... ***\n\n")
+
+general.printM(debug.getinfo(1).source:match(".*/(.*)"), "done")
+return _M;
