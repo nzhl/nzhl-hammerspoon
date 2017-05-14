@@ -1,5 +1,6 @@
 local general = require("general");
-general.printM(debug.getinfo(1).source:match(".*/(.*)"), "init")
+general.printM(debug.getinfo(1).source:match(".*/(.*)"), "init");
+local _M = {};
 
 local function ShowTime()
     if time_draw == nil then
@@ -20,7 +21,7 @@ local function ShowTime()
         time_draw=nil
     end
 end
-hs.hotkey.bind({"alt"}, "T", nil, ShowTime)
+hs.hotkey.bind({"alt"}, "T", nil, ShowTime);
 
-general.printM(debug.getinfo(1).source:match(".*/(.*)"), "done")
+general.printM(debug.getinfo(1).source:match(".*/(.*)"), "done");
 return _M;
