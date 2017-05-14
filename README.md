@@ -14,8 +14,8 @@ and you're set.
 
 My config mainly implemented those following features :
 
-1. timer (check your menu after set my config)
-   + count down for 15 / 30 / 45 / 60, after that a system notification will send
+1. relax your eyes (auto lock the screen after every given interval)
+   + default time is 45 minutes
 2. caffeinate 
    + always keep your screen on, in fact there is an app with the same name that special for this function.
    + default on, click the cafe cup to toggle it
