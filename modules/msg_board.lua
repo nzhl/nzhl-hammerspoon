@@ -38,7 +38,7 @@ _M.path_watcher = hs.pathwatcher.new(general.config_path .. "todo.txt", UpdateTo
 
 --------------------  image ----------------
 
-local image_frame = hs.geometry.rect(general.full_frame.w - 400, general.full_frame.h - 200, 400, 200);
+local image_frame = hs.geometry.rect(general.full_frame.w - 600, general.full_frame.h - 300, 600, 400);
 _M.image = general.CreateBackgroundImage(image_frame, general.config_path .. "resources/timetable.png")
 _M.image:show();
 

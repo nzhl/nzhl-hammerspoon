@@ -11,7 +11,7 @@ package.path = package.path .. ';modules/?.lua'
 require("chooser")
 require("caffeinate")
 require("msg_board")
-require("relax_eyes")
+--require("relax_eyes")
 require("show_time")
 --require("record_your_days")
 hs.alert("All Loaded !")
