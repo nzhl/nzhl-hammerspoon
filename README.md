@@ -5,7 +5,7 @@ Hammerspoon is a versatile tool on Mac but unfortunately only little people know
 ## Get started
 
 1. Install [Hammerspoon](http://www.hammerspoon.org/) first.
-2. `git clone --depth 1 https://github.com/ashfinal/awesome-hammerspoon.git ~/.hammerspoon`
+2. `git clone --depth 1 https://github.com/nzhl/nzhl-hammerspoon ~/.hammerspoon`
 3. Reload the configutation.
 
 and you're set.
